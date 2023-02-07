@@ -27,7 +27,7 @@ func main() {
 
 	// Allows all origins, not suitable for prod environments
 	r.Use(cors.New(cors.Config{
-		AllowOrigins: []string{"*"},
+		AllowOrigins: []string{"http://localhost:3000"},
 		AllowMethods: []string{"PUT", "GET", "POST", "DELETE"},
 		AllowHeaders: []string{"Content-Type", "Authorization"},
 		MaxAge:       12 * time.Hour,
