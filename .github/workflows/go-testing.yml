@@ -33,4 +33,6 @@ jobs:
       - name: Build 
         run: go build -v ./...
       - name: Test with Go CLI 
+        env: 
+          MONGODB_URL_TESTING: ${{secrets.MONGODB_URL_TESTING}}
         run: go test -v ./...
