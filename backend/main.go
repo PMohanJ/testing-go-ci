@@ -9,5 +9,5 @@ func main() {
 }
 
 func Temp() string {
-	return "Some temporary function"
+	return "Some temporary"
 }
