@@ -6,7 +6,7 @@ import (
 
 func TestTemp(t *testing.T) {
 	t.Run("prints some text", func(t *testing.T) {
-		want := "Some temporary "
+		want := "Some temporary"
 
 		got := Temp()
 
