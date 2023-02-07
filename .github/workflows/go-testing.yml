@@ -1,0 +1,35 @@
+name: Web-chat-application
+
+# on a go file modification/addition run the workflow
+on: 
+  push: 
+    paths:
+      - '**.go'
+  pull_request:
+    paths:
+      - '**.go'
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    # set working directory to backend to run Go code 
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
+
+      - name: Install dependencies
+        run: go get .
+      - name: Build 
+        run: go build -v ./...
+      - name: Test with Go CLI 
+        run: go test -v ./...
+
+      
