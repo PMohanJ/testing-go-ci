@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Println("A testing repository")
+	fmt.Println("A testing")
 }
 
 func Temp() string {
