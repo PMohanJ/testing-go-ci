@@ -6,5 +6,8 @@ import (
 
 func main() {
 	fmt.Println("A testing repository")
-	fmt.Println("Modified main file")
+}
+
+func Temp() string {
+	return "Some temporary function"
 }
