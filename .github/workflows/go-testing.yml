@@ -3,6 +3,7 @@ name: Web-chat-application
 # on a go file modification/addition run the workflow
 on: 
   push: 
+    branches: ['main']
     paths:
       - '**.go'
   pull_request:
