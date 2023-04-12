@@ -33,7 +33,7 @@ jobs:
       - name: Build 
         run: go build -v ./...
       - name: copy .env 
-        run: cp ./env ./controllers/controllers_test
+        run: cp .env ./controllers/controllers_test
       - name: Test with Go CLI 
         env: 
           MONGODB_URL_TESTING: ${{secrets.MONGODB_URL_TESTING}}
