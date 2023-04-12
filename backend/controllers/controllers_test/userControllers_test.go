@@ -33,7 +33,7 @@ var messageIdEdit string
 func TestMain(m *testing.M) {
 	router = gin.Default()
 
-	err := godotenv.Load("./../../.env")
+	err := godotenv.Load(".env")
 	if err != nil {
 		log.Fatal("Error loading env variables ", err)
 	}
