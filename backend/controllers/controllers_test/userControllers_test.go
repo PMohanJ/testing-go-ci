@@ -37,6 +37,7 @@ func TestMain(m *testing.M) {
 	if err != nil {
 		log.Fatal("Error loading env variables ", err)
 	}
+	log.Println("Got env file")
 	MongoDBURL := os.Getenv("MONGODB_URL_TESTING")
 	// Initiate Databse
 	database.DBinstance(MongoDBURL)
